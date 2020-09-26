@@ -1,0 +1,72 @@
+Disclaimer: This is not an official document and I write this to the best of my knowledge. It may not be 100% right.
+
+Basic structure:
+--public
+---index.html
+--src
+---index.js
+
+
+React CDN
+https://reactjs.org/docs/cdn-links.html
+
+Version 16 shown, change version accordingly
+
+Development:
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+Production:
+<script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+
+
+React without JSX
+https://reactjs.org/docs/react-without-jsx.html
+Each JSX element is just syntactic sugar for calling React.createElement(component, props, ...children). 
+So, anything you can do with JSX can also be done with just plain JavaScript.
+
+ReactDOM
+Functions in ReactDOM:
+* render()
+* hydrate()
+* unmountComponentAtNode()
+* findDOMNode()
+* createPortal()
+
+- render()
+ReactDOM.render(element, container[, callback])
+
+
+Online Babel compiler
+https://babeljs.io/repl/#?presets=react&code_lz=GYVwdgxgLglg9mABACwKYBt1wBQEpEDeAUIogE6pQhlIA8AJjAG4B8AEhlogO5xnr0AhLQD0jVgG4iAXyJA
+
+Warning: Each child in a list should have a unique "key" prop.
+You should add a key to each child as well as each element inside children.
+This way React can handle the minimal DOM change.
+
+
+At the project root, run this command `npm init`.
+This will create a package.json file containing description and configuration of the project
+
+To be able to write in JSX we need to install Babel compiler, which translates JSX into JS objects, which the Browser understands
+`npm install --save-dev @babel/core@7.1.0 @babel/preset-env@7.1.0 @babel/preset-react@7.0.0`
+
+preset-react and preset-env are both presets that transform specific flavors of code — in this case, 
+the env preset allows us to transform ES6+ into more traditional javascript and 
+the react preset does the same, but with JSX instead.
+
+Create a .babelrc file in the project root.
+Tell babel, we're going to use the env and react presets
+
+We will need a tool to help us with building the project. Webpack is a popular tool for such
+`npm install --save-dev webpack@4.44.2 webpack-cli@3.3.12 webpack-dev-server@3.11.0 style-loader@0.23.0 css-loader@1.0.0 babel-loader@8.0.2`
+
+
+Instead of loading from CDN:
+`npm install react@16.5.2 react-dom@16.5.2`
+
+Hot Module Replacement
+`npm install react-hot-loader`
+
+https://webpack.js.org/loaders/file-loader/

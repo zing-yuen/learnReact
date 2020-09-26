@@ -1,10 +1,23 @@
-const title = React.createElement('h1', {}, 'Learn React');
+const ce = React.createElement;
 
-const paragraph = React.createElement('p', {}, 'Hands-on practice with Zing')
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { name: 'Zing' }
+    }
 
-const container = React.createElement('div', {}, [paragraph, title]);
+    render() {
+        const title = ce('h1', {}, 'Learn React');
+        const paragraph = ce('p', {}, 'Hands-on practice with Zing')
+
+        return ce(
+            'div', {},
+            [title, paragraph]
+        )
+    }
+}
 
 ReactDOM.render(
-    container,
+    ce(App, {}, null),
     document.getElementById('app')
 );

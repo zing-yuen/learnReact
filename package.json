@@ -1,0 +1,39 @@
+{
+  "name": "learnreact",
+  "version": "1.0.0",
+  "description": "Learning Simple React",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zing-yuen/learnReact.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "zing yuen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zing-yuen/learnReact/issues"
+  },
+  "homepage": "https://github.com/zing-yuen/learnReact#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "css-loader": "^1.0.0",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-hot-loader": "^4.13.0"
+  }
+}

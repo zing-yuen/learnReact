@@ -1,6 +1,8 @@
-const title = React.createElement('h1', {}, 'Learn React');
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App.js";
 
 ReactDOM.render(
-    title,
+    <App />,
     document.getElementById('app')
 );
